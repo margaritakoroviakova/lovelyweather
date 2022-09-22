@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+    color: #9932cc;
+    font-family: "Aboreto", cursive;
+}
+
+h2 {
+    text-align: center;
+    color: #5a6275;
+    font-family: "Roboto", sans-serif;
+}
+
+.time {
+    display: block;
+    font-size: 25px;
+    color: #5a6275;
+    font-family: "Roboto", sans-serif;
+    margin-right: 343px;
+}
+
+.form-control {
+    display: block;
+    font-weight: bold;
+    margin-left: 330px;
+}
+
+
+button {
+    margin-left: 331px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 25px;
+    font-family: "Libre Baskerville", serif;
+    color: #4eae53;
+}
+
+.parameters {
+    color: #157aca;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    color: #5a6275;
+    font-family: "Roboto", sans-serif;
+}
+
+.warning {}
+
+.temperature {
+    margin-left: 330px;
+    font-size: 20px;
+}
+
+.cel {
+    font-size: 20px;
+}
