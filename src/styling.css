@@ -39,6 +39,7 @@ h3 {
 .parameters {
     color: #157aca;
     font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
 }
 
 .container {

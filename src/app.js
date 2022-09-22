@@ -31,6 +31,9 @@ function show(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#wind").innerHTML = `wind speed: ${Math.round(response.data.wind.speed)}`;
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  console.log(response.data);
 }
 
 function links(city) {
@@ -55,3 +58,5 @@ let searchForm = document.querySelector("#searching-form");
 searchForm.addEventListener("submit", searching);
 
 links("Kyiv");
+
+
