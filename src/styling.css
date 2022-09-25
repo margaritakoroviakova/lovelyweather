@@ -6,7 +6,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: #5a6275;
+    color: #455d7a;
     font-family: "Roboto", sans-serif;
 }
 
@@ -16,30 +16,45 @@ h2 {
     color: #5a6275;
     font-family: "Roboto", sans-serif;
     margin-right: 343px;
+    color: #455d7a;
 }
 
 .form-control {
     display: block;
     font-weight: bold;
     margin-left: 330px;
+    color: #f95959;
+    border: 1px solid #233142;
 }
 
 
-button {
+.primary{
     margin-left: 331px;
+    background-color: #233142;
+    border: 1px solid #233142;
+}
+
+.primary:hover {
+    background-color: #233142 ;
+    border: 1px solid #233142;
 }
 
 h3 {
-    text-align: center;
+   text-align: center;
     margin-top: 25px;
     font-family: "Libre Baskerville", serif;
-    color: #4eae53;
+    color: #f95959;
 }
 
 .parameters {
-    color: #157aca;
+    color: #c9c7c7;
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
+    font-size: 20px;
+}
+
+.windy {
+    margin-top: 17px;
 }
 
 .container {
@@ -47,13 +62,30 @@ h3 {
     font-family: "Roboto", sans-serif;
 }
 
-.warning {}
 
 .temperature {
-    margin-left: 330px;
-    font-size: 20px;
+    margin-left: 340px;
+    font-size: 40px;
+    color: #c9c7c7;
 }
 
-.cel {
-    font-size: 20px;
+
+.cel, .fah {
+    font-size: 17px;
+    color: #455d7a;
+}
+
+
+.iconic {
+display: block;
+margin-left: 350px;
+}
+
+.git {
+    margin-left: 885px;
+    color: #c9c7c7;
+}
+
+.git:hover {
+    color: #233142;
 }

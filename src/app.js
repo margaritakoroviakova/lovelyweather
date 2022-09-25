@@ -27,13 +27,14 @@ let cityForm = document.querySelector("#searching-form");
 cityForm.addEventListener("submit", search);
 
 function show(response) {
+  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#wind").innerHTML = `wind speed: ${Math.round(response.data.wind.speed)}`;
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
-  console.log(response.data);
+  document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function links(city) {
@@ -58,5 +59,12 @@ let searchForm = document.querySelector("#searching-form");
 searchForm.addEventListener("submit", searching);
 
 links("Kyiv");
+
+function convertion (event) {
+  event.preventDefault();
+}
+
+let tempLink = document.querySelector("#fahLink");
+tempLink.addEventListener("click", convertion)
 
 
