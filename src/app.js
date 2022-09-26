@@ -30,7 +30,7 @@ function show(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
-  document.querySelector("#feeling").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}`;
+  document.querySelector("#feeling").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)} °C`;
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
