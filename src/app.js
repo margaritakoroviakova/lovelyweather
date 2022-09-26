@@ -35,6 +35,7 @@ function show(response) {
     response.data.main.temp
   );
    if (response.data.sys.country === 'RU') {
+    document.querySelector("#sun").innerHTML =  null ;
     document.querySelector("#sun").innerHTML =  "OOOps, something went wrong...";
   }
   document.querySelector("#wind").innerHTML = `wind speed: ${Math.round(response.data.wind.speed)}`;
