@@ -35,7 +35,7 @@
       </head>
 
     <body>
-        <div class="weather">
+        <div class="weather" id="sun">
       <div class="container">
         <div class="row">
           <div class="col-4 offset-4">
@@ -53,6 +53,7 @@
                 class="form-control"
                 id="city"
                 placeholder="Enter a city"
+                autocomplete="off"
               />
             </div>
             <div class="col-4">
@@ -65,8 +66,8 @@
         <div class="row">
           <div class="col-8">
             <span id="temp" class="temperature"></span>
-            <span class="cel"> °C |</span>
-             <span class="fah"> °F  </span>
+            <span class="cel"> <a href=# id="celLink" class="celsius"> °C | </a></span>
+             <span class="fah"> <a href="#" id="fahLink" class="fahrenheit"> °F </a>  </span>
         </form>
         <img class="iconic" id="icon" alt="">
           </div>

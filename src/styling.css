@@ -78,6 +78,10 @@ h3 {
     color: #455d7a;
 }
 
+.celsius, .fahrenheit {
+    color: #455d7a;
+}
+
 
 .iconic {
 display: block;

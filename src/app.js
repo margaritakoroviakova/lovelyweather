@@ -34,6 +34,9 @@ function show(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
+   if (response.data.sys.country === 'RU') {
+    document.querySelector("#sun").innerHTML =  "OOOps, something went wrong...";
+  }
   document.querySelector("#wind").innerHTML = `wind speed: ${Math.round(response.data.wind.speed)}`;
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -61,11 +64,5 @@ let searchForm = document.querySelector("#searching-form");
 searchForm.addEventListener("submit", searching);
 
 links("Kyiv");
-
-function convertion (event) {
-  event.preventDefault();
-}
-
-
 
 
