@@ -29,6 +29,7 @@ cityForm.addEventListener("submit", search);
 function show(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -64,7 +65,6 @@ function convertion (event) {
   event.preventDefault();
 }
 
-let tempLink = document.querySelector("#fahLink");
-tempLink.addEventListener("click", convertion)
+
 
 
