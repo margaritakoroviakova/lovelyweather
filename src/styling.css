@@ -92,3 +92,7 @@ margin-left: 350px;
 .git:hover {
     color: #233142;
 }
+
+.weather {
+    line-height: 35px;
+}
