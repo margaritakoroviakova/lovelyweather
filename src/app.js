@@ -1,5 +1,6 @@
 let now = new Date();
 let date = now.getDate();
+
 let days = [
   "Sunday",
   "Monday",
@@ -17,6 +18,45 @@ currentTime.innerHTML = `${hour} : ${minute}`;
 let currentDate = document.querySelector("h2");
 currentDate.innerHTML = `${day}, ${date}`;
 
+
+function formatDay (timestamp) {
+  let greatDate = new Date(timestamp*1000);
+  let day = greatDate.getDay();
+  let days = ["Sun", "Mon", "Tue","Wed","Thu","Fri","Sat"];
+
+  return days[day];
+}
+
+
+function mainForecast(response) {
+  console.log(response.data);
+  let displayForecast = response.data.daily;
+  let forecastEl = document.querySelector("#forecast");
+  let forecastStructure = `<div class="row">`;
+  displayForecast.forEach(function (forecastDay, index) {
+    if (index < 6)  {
+      forecastStructure = forecastStructure + `
+      <div class="col-2">
+        <div class="day">${formatDay(forecastDay.dt)}</div>
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
+        <div class="degrees">
+        <span class="degree">${Math.round(forecastDay.temp.max)}° /</span>
+        <span class="degree">${Math.round(forecastDay.temp.min)}°</span>
+        </div>
+        </div>
+`;
+    }
+  });
+  forecastStructure = forecastStructure + `</div>`;
+  forecastEl.innerHTML = forecastStructure;
+}
+
+function forecast (coordinates) {
+  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(mainForecast);
+}
+
 function search(event) {
   event.preventDefault();
   let cities = document.querySelector("h3");
@@ -27,7 +67,6 @@ let cityForm = document.querySelector("#searching-form");
 cityForm.addEventListener("submit", search);
 
 function show(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#feeling").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)} °C`;
@@ -41,6 +80,8 @@ function show(response) {
   document.querySelector("#wind").innerHTML = `wind speed: ${Math.round(response.data.wind.speed)}`;
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("h2").innerHTML = formatDay(response.data.dt*1000);
+  forecast(response.data.coord);
 }
 
 function links(city) {

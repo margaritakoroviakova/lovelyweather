@@ -13,7 +13,6 @@ h2 {
 .time {
     display: block;
     font-size: 25px;
-    color: #5a6275;
     font-family: "Roboto", sans-serif;
     margin-right: 343px;
     color: #455d7a;
@@ -101,25 +100,18 @@ margin-left: 350px;
     line-height: 35px;
 }
 
-.day {
-    margin-left: 370px;
-    margin-top: 20px;
-    font-size: 20px;
-    color:#455d7a;
-}
-
-.degree {
-    margin-left: 375px;
-    font-size: 15px;
-    color: #c9c7c7;;
-}
-
-.image {
-    margin-left: 350px;
-}
 
 h4 {
     text-align: center;
     font-family: "Libre Baskerville", serif;
-        color: #f95959;
+    color: #f95959;
+}
+
+.day {
+ color: #455d7a;
+}
+
+
+.degree {
+    color: #c9c7c7 ;
 }
