@@ -89,7 +89,7 @@ margin-left: 350px;
 }
 
 .git {
-    margin-left: 885px;
+    margin-top: 50px;
     color: #c9c7c7;
 }
 
@@ -99,4 +99,21 @@ margin-left: 350px;
 
 .weather {
     line-height: 35px;
+}
+
+.day {
+    margin-left: 370px;
+    margin-top: 20px;
+    font-size: 20px;
+    color:#455d7a;
+}
+
+.degree {
+    margin-left: 375px;
+    font-size: 15px;
+    color: #c9c7c7;;
+}
+
+.image {
+    margin-left: 350px;
 }
