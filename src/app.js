@@ -1,5 +1,4 @@
-function formatDate (timestamp) {
-let now = new Date(timestamp);
+let now = new Date();
 let date = now.getDate();
 
 let days = [
@@ -18,7 +17,7 @@ let currentTime = document.querySelector("#timing");
 currentTime.innerHTML = `${hour} : ${minute}`;
 let currentDate = document.querySelector("h2");
 currentDate.innerHTML = `${day}, ${date}`;
-}
+
 
 function formatDay (timestamp) {
   let greatDate = new Date(timestamp*1000);
@@ -81,7 +80,6 @@ function show(response) {
   document.querySelector("#wind").innerHTML = `wind speed: ${Math.round(response.data.wind.speed)}`;
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  document.querySelector("h2").innerHTML = formatDate(response.data.dt*1000);
   forecast(response.data.coord);
 }
 
