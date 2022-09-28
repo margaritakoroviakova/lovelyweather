@@ -113,10 +113,19 @@ h4 {
 
 .day {
  color: #455d7a;
+ margin-left: 200px;
 }
 
 
-.degree {
-    color: #c9c7c7 ;
+.degrees {
+    color: #c9c7c7;
+    margin-left: 190px;
 }
+
+img {
+    display: block;
+    margin-left: 160px;
+}
+
+
 

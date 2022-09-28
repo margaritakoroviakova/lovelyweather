@@ -36,7 +36,7 @@ function mainForecast(response) {
   displayForecast.forEach(function (forecastDay, index) {
     if (index < 6)  {
       forecastStructure = forecastStructure + `
-      <div class="col-2">
+      <div class="col-4">
         <div class="day">${formatDay(forecastDay.dt)}</div>
         <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
         <div class="degrees">
