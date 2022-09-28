@@ -76,12 +76,8 @@ h3 {
 }
 
 
-.cel, .fah {
-    font-size: 17px;
-    color: #455d7a;
-}
-
-.celsius, .fahrenheit {
+.cel {
+    font-size: 20px;
     color: #455d7a;
 }
 
