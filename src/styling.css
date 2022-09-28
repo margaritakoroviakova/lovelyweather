@@ -92,12 +92,14 @@ margin-left: 350px;
 }
 
 .git {
-    margin-top: 50px;
-    color: #c9c7c7;
+    display: block;
+    margin-top: 12px;
+    margin-left: 605px;
+    color: #455d7a;
 }
 
 .git:hover {
-    color: #233142;
+    color: #455d7a;
 }
 
 .weather {
@@ -126,6 +128,8 @@ img {
     display: block;
     margin-left: 160px;
 }
+
+
 
 
 
